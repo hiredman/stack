@@ -1,0 +1,30 @@
+#!/home/kpd/sthack.sh
+# trace
+
+while
+  [ dup push1 rot push1 push1 dup pop1 do  ( bookkeeping )
+    [ pop1 dup push1 do pop1 pop1 while ] ( true )
+    [ pop1 . pop1 . ] ( false )
+    if ]
+def
+
+not [ [ nil ] [ true ] if ] def
+
+nilp [ nil eq ] def
+
+car [ pop . ] def
+
+cdr [ pop rot . ] def
+
+range
+  [ rot push1 push1 nil pop1 pop1
+    [ inc dup push1 rot push1 pair pop1 pop1 ]
+    [ push1 push1 dup pop1 eq [ nil ] [ pop1 dup ] if ] while .
+    nil rot [ pop rot push1 rot pair pop1 ] [ nilp not ] while . ]
+def
+
+# 0 19 range
+
+a [ hello world pair p . ] def a
+
+#dumpstack 
