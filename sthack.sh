@@ -1,2 +1,2 @@
 #!/bin/sh
-/home/kpd/stack2.sh < "$1"
+/home/kpd/stack/stack2.sh < "$1"

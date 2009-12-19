@@ -1,5 +1,5 @@
-#!/home/kpd/sthack.sh
-# trace
+#!/home/kpd/stack/sthack.sh
+ trace
 
 while
   [ dup push1 rot push1 push1 dup pop1 do  ( bookkeeping )
